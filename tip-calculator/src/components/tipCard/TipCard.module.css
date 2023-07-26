@@ -1,0 +1,50 @@
+.tipCard {
+  background-color: hsl(183, 100%, 15%);
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.priceContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.tipText {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.spanText {
+  color: hsl(184, 14%, 56%);
+}
+
+.prices {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.amount {
+  color: hsl(172, 67%, 45%);
+  font-size: 3rem;
+}
+
+button {
+  border-radius: 5px;
+  height: 3rem;
+  width: 100%;
+  border: none;
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  font-size: 1.5rem;
+}
+
+button:hover {
+  background-color: hsl(172, 87%, 57%);
+}
