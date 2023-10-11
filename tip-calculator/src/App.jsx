@@ -1,9 +1,10 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import "./App.css";
 import CustomButton from "./components/customButton";
 import CustomInput from "./components/customInput";
 import TipCard from "./components/tipCard";
 import styles from "./App.module.css";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { TipContext } from "./components/context/TipContextProvider";
 
 const buttonsGrid = [
@@ -25,17 +26,27 @@ function App() {
     setCustom,
   } = useContext(TipContext);
 
-  function calcTip(thePercent) {
-    const Percent = thePercent / 100;
-    const tipAmount = (Percent * Number(billNum)) / Number(pplNum);
-    const totalAmount = Number(billNum) / Number(pplNum) + tipAmount;
+  function calcTip(selectedTip) {
+    const TipPercent = selectedTip / 100;
+    const tipAmount = selectedTip
+      ? (TipPercent * Number(billNum)) / Number(pplNum)
+      : 0;
+
+    //prevents zero value from causing error
+    const peopleCount = Number(pplNum) === 0 ? 1 : Number(pplNum);
+
+    const totalAmount = selectedTip
+      ? Number(billNum) / peopleCount + tipAmount
+      : Number(billNum) / peopleCount;
 
     setTipAmount(tipAmount);
-    setTotalAmount(totalAmount);
-
-    console.log(tipAmount);
-    console.log(totalAmount);
+    // keeps total as zero if input is empty
+    pplNum === "" ? setTotalAmount(0) : setTotalAmount(totalAmount);
   }
+
+  useEffect(() => {
+    calcTip();
+  }, [pplNum]);
 
   return (
     <div className="App">

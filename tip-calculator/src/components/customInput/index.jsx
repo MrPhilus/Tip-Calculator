@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import styles from "./CustomInput.module.css";
 import dollar from "../../assets/images/icon-dollar.svg";
 import person from "../../assets/images/icon-person.svg";
