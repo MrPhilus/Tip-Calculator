@@ -6,8 +6,8 @@ export const TipContext = createContext();
 const TipContextProvider = ({ children }) => {
   const [tipAmount, setTipAmount] = useState(0);
   const [totalAmount, setTotalAmount] = useState(0);
-  const [billNum, setBillNum] = useState();
-  const [pplNum, setPplNum] = useState();
+  const [billNum, setBillNum] = useState("");
+  const [pplNum, setPplNum] = useState("");
   const [custom, setCustom] = useState();
 
   const resetCalculator = () => {
