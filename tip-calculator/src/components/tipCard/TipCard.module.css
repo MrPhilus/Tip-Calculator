@@ -17,7 +17,7 @@
 
 .tipText {
   color: white;
-  font-size: 1.2rem;
+  font-size: 2vmax;
 }
 
 .spanText {
@@ -32,7 +32,7 @@
 
 .amount {
   color: hsl(172, 67%, 45%);
-  font-size: 3rem;
+  font-size: 3vmax;
 }
 
 button {

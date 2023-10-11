@@ -2,7 +2,6 @@ import "./App.css";
 import CustomButton from "./components/customButton";
 import CustomInput from "./components/customInput";
 import TipCard from "./components/tipCard";
-import logo from "../src/assets/images/logo.svg";
 import styles from "./App.module.css";
 import { useContext } from "react";
 import { TipContext } from "./components/context/TipContextProvider";
@@ -40,9 +39,6 @@ function App() {
 
   return (
     <div className="App">
-      {/* <div>
-        <img className="logoImg" src={logo} alt="" />
-      </div> */}
       <div className="mainContainer">
         <div className="actions">
           <div className="inputBox">

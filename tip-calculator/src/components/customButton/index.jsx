@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+
 import styles from "./CustomButton.module.css";
 const CustomButton = (props) => {
   const { text, customStyle, onClick } = props;
