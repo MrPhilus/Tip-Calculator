@@ -8,7 +8,7 @@ const TipContextProvider = ({ children }) => {
   const [totalAmount, setTotalAmount] = useState(0);
   const [billNum, setBillNum] = useState("");
   const [pplNum, setPplNum] = useState("");
-  const [custom, setCustom] = useState();
+  const [custom, setCustom] = useState("");
 
   const resetCalculator = () => {
     setTipAmount(0);

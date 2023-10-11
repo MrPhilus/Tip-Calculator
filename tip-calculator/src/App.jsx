@@ -44,9 +44,16 @@ function App() {
     pplNum === "" ? setTotalAmount(0) : setTotalAmount(totalAmount);
   }
 
+  function handleCustomTip(e) {
+    // Check if pplNum is not empty and is a valid number
+    if (pplNum && !isNaN(parseFloat(pplNum))) {
+      setCustom(calcTip(e.target.value));
+    }
+  }
+
   useEffect(() => {
     calcTip();
-  }, [pplNum]);
+  }, [pplNum, billNum]);
 
   return (
     <div className="App">
@@ -79,7 +86,7 @@ function App() {
                 isLabel={false}
                 placeholder={"Custom"}
                 value={custom}
-                onInput={(e) => setCustom(calcTip(e.target.value))}
+                onInput={handleCustomTip}
               />
             </div>
           </div>
