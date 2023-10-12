@@ -9,6 +9,7 @@ const TipContextProvider = ({ children }) => {
   const [billNum, setBillNum] = useState("");
   const [pplNum, setPplNum] = useState("");
   const [custom, setCustom] = useState("");
+  const [selectedButton, setSelectedButton] = useState(null);
 
   const resetCalculator = () => {
     setTipAmount(0);
@@ -16,6 +17,7 @@ const TipContextProvider = ({ children }) => {
     setBillNum("");
     setPplNum("");
     setCustom("");
+    setSelectedButton(null);
   };
 
   const objectsPassed = {
@@ -29,6 +31,8 @@ const TipContextProvider = ({ children }) => {
     setPplNum,
     custom,
     setCustom,
+    selectedButton,
+    setSelectedButton,
     resetCalculator,
   };
   return (
